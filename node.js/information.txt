@@ -1,0 +1,26 @@
+Node js ?
+modules ?
+3 Types: 
+         Core Module 
+            https fs path etc 
+        local module 
+            we can create custom module 
+            export module.export 
+        third party module 
+            download from internet
+            npmjs.com 
+            60k+
+            express nodemon nodemiler mongoose  
+
+        require() => call for module 
+
+
+# FS Module
+blocking and non blocking
+
+synchronous and Asynchornous 
+
+Now FS module File System
+    CRUD Operations
+
+    MKDIR we have to specify the path 

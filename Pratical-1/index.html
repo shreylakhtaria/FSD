@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System</title>
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+    <div class="poll-container">
+        <h1>Vote for Your Favorite F1 team </h1>
+        <div class="options">
+            <button onclick="vote('option1')">Red Bull</button>
+            <button onclick="vote('option2')">Mercedes</button>
+
+        </div>
+        <div class="results">
+            <p>Red Bull Votes: <span id="option1-votes">0</span></p>
+            <p>Mercedes Votes: <span id="option2-votes">0</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

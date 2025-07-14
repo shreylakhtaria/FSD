@@ -1,0 +1,28 @@
+.variable-proximity {
+  cursor: default;
+  user-select: none;
+  position: relative;
+}
+
+.variable-proximity span {
+  will-change: transform, font-weight, filter, text-shadow;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.variable-proximity motion.span {
+  display: inline-block;
+  transform-origin: center bottom;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

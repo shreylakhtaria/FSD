@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Example</title>
+</head>
+<body>
+    <p id="ans"></p>
+    <p id="name"></p> <!-- Added this element for saveData function -->
+    <input type="button" value="Save Object" onclick="saveObj()" />
+    <input type="button" value="Save Data" onclick="saveData()" />
+    <input type="button" value="Fetch Data" onclick="alert(fetchData('name'))" />
+    <input type="button" value="Get Object Data" onclick="console.log(getObjData())" />
+    <input type="button" value="Remove Data" onclick="removeData('name')" />
+    <input type="button" value="Remove All" onclick="removeAll()" />
+    <script src="script.js"></script>
+</body>
+</html>
