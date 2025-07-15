@@ -5,7 +5,8 @@ modules ?
             https fs path etc 
         local module 
             we can create custom module 
-            export module.export 
+            export module.export
+
         third party module 
             download from internet
             npmjs.com 
@@ -15,6 +16,15 @@ modules ?
         require() => call for module 
 
 
+        package.json file :
+            Save meta data of js application 
+            Store package name and their version 
+        various method to create package.json file
+            1) npm init 
+            2) npm init -y 
+        npm i nodemon 
+        npm i nodemon -g 
+        
 # FS Module
 blocking and non blocking
 

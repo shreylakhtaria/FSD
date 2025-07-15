@@ -12,7 +12,9 @@ else {
 http.createServer(function (req,res){
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.write('Hello World\n');
-    res.write("<b>Hello</b>");
+    res.write("<b>Hello World</b>");
+    res.write("<br/>");
+    res.write("this is nodemon installation");
     res.end();
 }).listen(3000);
 console.log('Server running at http://127.0.0.1:3000/');
