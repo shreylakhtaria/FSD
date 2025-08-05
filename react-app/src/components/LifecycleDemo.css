@@ -1,0 +1,174 @@
+
+.lifecycle-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 10;
+}
+
+.lifecycle-container h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.controls button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.controls button:hover {
+  background: #2980b9;
+}
+
+.demos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .demos {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lifecycle-demo {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e9ecef;
+}
+
+.lifecycle-demo h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #3498db;
+}
+
+.demo-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.counter-section,
+.data-section {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.counter-section h3,
+.data-section h3 {
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+  font-size: 1.2rem;
+}
+
+.counter-section button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.counter-section button:hover {
+  background: #c0392b;
+}
+
+.logs-section {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #27ae60;
+}
+
+.logs-section h3 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 1.2rem;
+}
+
+.logs {
+  max-height: 200px;
+  overflow-y: auto;
+  background: #2c3e50;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.log-entry {
+  color: #ecf0f1;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  padding: 3px 0;
+  border-bottom: 1px solid #34495e;
+}
+
+.log-entry:last-child {
+  border-bottom: none;
+}
+
+/* Scrollbar styling for logs */
+.logs::-webkit-scrollbar {
+  width: 6px;
+}
+
+.logs::-webkit-scrollbar-track {
+  background: #34495e;
+  border-radius: 3px;
+}
+
+.logs::-webkit-scrollbar-thumb {
+  background: #3498db;
+  border-radius: 3px;
+}
+
+.logs::-webkit-scrollbar-thumb:hover {
+  background: #2980b9;
+}
+
+/* Animation for new log entries */
+.log-entry {
+  animation: fadeInLog 0.3s ease-in;
+}
+
+@keyframes fadeInLog {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

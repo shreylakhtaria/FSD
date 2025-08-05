@@ -1,9 +1,7 @@
-import { useState, useEffect, useRef } from 'react'
-import VariableProximity from './VariableProximity'
+import { useState, useEffect } from 'react'
 
 const Welcome = () => {
   const [currentDateTime, setCurrentDateTime] = useState(new Date())
-  const containerRef = useRef(null)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -28,39 +26,18 @@ const Welcome = () => {
   }
 
   return (
-    <div className="welcome-container" ref={containerRef}>
+    <div className="welcome-container">
       <div className="welcome-content">
         <div className="welcome-title">
-          <VariableProximity
-            label="Welcome!"
-            containerRef={containerRef}
-            radius={150}
-            falloff="exponential"
-            intensity={1.5}
-            className="title-text"
-          />
+          <h1 className="title-text">Welcome!</h1>
         </div>
         
         <div className="datetime-container">
-          <VariableProximity
-            label={formatDateTime(currentDateTime)}
-            containerRef={containerRef}
-            radius={120}
-            falloff="gaussian"
-            intensity={1.2}
-            className="datetime-text"
-          />
+          <p className="datetime-text">{formatDateTime(currentDateTime)}</p>
         </div>
         
         <div className="welcome-message">
-          <VariableProximity
-            label="This is Pratical-3 made by Shrey-Lakhataria"
-            containerRef={containerRef}
-            radius={100}
-            falloff="linear"
-            intensity={1}
-            className="message-text"
-          />
+          <p className="message-text">This is Pratical-3 made by Shrey-Lakhataria</p>
         </div>
       </div>
     </div>
