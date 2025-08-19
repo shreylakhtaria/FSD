@@ -10,9 +10,10 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/myexpapp1',)
+mongoose.connect('mongodb://localhost:27017/product',)
 .then(res=> console.log("Connected to MongoDB"))
 .catch(err => console.error("Could not connect to MongoDB", err));
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -43,7 +44,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-console.log("Server is running on port 127.0.0.1:3000");
-
 module.exports = app;
- 

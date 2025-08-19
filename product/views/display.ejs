@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display Products</title>
+</head>
+<body>
+  <h1>Products</h1>
+  <p><a href="/add-product">Add New Product</a> | <a href="/">Home</a></p>
+  <% if (products && products.length) { %>
+    <table border="1" cellpadding="8" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Details</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% products.forEach(function(product){ %>
+          <tr>
+            <td><%= product.pname %></td>
+            <td><%= product.pdetail %></td>
+            <td><%= product.pprice %></td>
+            <td>
+              <a href="/edit/<%= product._id %>">Edit</a> |
+              <a href="/delete/<%= product._id %>" onclick="return confirm('Delete this product?')">Delete</a>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } else if (product) { %>
+    <h2>Product details</h2>
+    <p><strong>Name:</strong> <%= product.pname %></p>
+    <p><strong>Details:</strong> <%= product.pdetail %></p>
+    <p><strong>Price:</strong> <%= product.pprice %></p>
+    <p><a href="/edit/<%= product._id %>">Edit</a> | <a href="/display">Back to list</a></p>
+  <% } else { %>
+    <p>No products found.</p>
+  <% } %>
+
+</body>
+</html>

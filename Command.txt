@@ -1,0 +1,7 @@
+#BE
+Step-1 
+npx express-generator --view=ejs <appname>
+cd <appname>
+npm i
+
+npm i nodemon 

@@ -49,8 +49,6 @@ app.get('/home', (req, res) => {
   res.render('home', {"mya": "Shrey lakhataria"});
 })
 
-
-
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
